@@ -1,0 +1,69 @@
+// report card generator
+
+#include <stdio.h>
+#include <unistd.h>
+
+int main() {
+    printf("-------------------------------------------------\n");
+    printf("        Jawahar Navodaya Vidyalaya\n");
+    printf("            Annual Report Card\n\n\n");
+    
+    char name[30];
+    int standard;
+    char section;
+    printf("Name:");
+    scanf("%[^\n]%*n", name);
+    printf("Standard:");
+    scanf("%d", &standard);
+    while ((getchar()) != '\n');
+    printf("Section:");
+    scanf("%c", &section);
+    printf("\n\n");
+    
+    int m,e,h,s,ss;
+    printf("Marks Secured out of 100\n");
+    while ((getchar()) != '\n');
+    printf("Mathematics:");
+    scanf("%d",&m);
+    while ((getchar()) != '\n');
+    printf("English:");
+    scanf("%d",&e);
+    while ((getchar()) != '\n');
+    printf("Hindi:");
+    scanf("%d",&h);
+    while ((getchar()) != '\n');
+    printf("Science:");
+    scanf("%d",&s);
+    while ((getchar()) != '\n');
+    printf("Social Studies:");
+    scanf("%d",&ss);
+    printf("\n\n");
+    usleep(100000);
+    
+    int totalmarks;
+    totalmarks=m+e+h+s+ss;
+    printf("Total marks Secured:%d\n",totalmarks);
+    
+    char grade='x';
+    if (totalmarks<=500 && totalmarks>=450) {
+        grade='A';
+    }else if(totalmarks<=449 && totalmarks>=400) {
+        grade='B';
+    }else if(totalmarks<=399 && totalmarks>=350) {
+        grade='C';
+    }else if(totalmarks<=349 && totalmarks>=300) {
+        grade='D';
+    }else if(totalmarks<=299 && totalmarks>=200) {
+        grade='E';
+    }else if(totalmarks>0 && totalmarks <=199){
+        grade='F';
+    }else if(totalmarks>500 && totalmarks<=0){
+        printf("Invalid boundary");
+    }
+    
+    if (grade != 'x')
+    printf("Grade: %c\n",grade);
+    printf("----------------------------------------------");
+ 
+    return 0;
+}
