@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+    char grade;
+    puts("Enter the grade secured by the student:");
+    scanf("%c",&grade);
+    switch (grade){
+        case 'A':
+          printf("Fantastic! keep it up");
+          break;
+        case 'B':
+          printf("Good job, continue your hard work");
+          break;
+        case 'C':
+          printf("Nice pratice hard");
+          break;
+        case 'D':
+          printf("Focus more on studies");
+          break;
+        case 'E':
+          printf("Try to attend classes more");
+          break;
+        default:
+          printf("Invalid input");
+    }
+    return 0;
+        
+}
