@@ -1,0 +1,18 @@
+//array as function
+#include <stdio.h>
+
+int oddCount(int[],int);
+void main(){
+    int array[10]={2,98,99,27,31,53,88,92,11,12};
+    int count=oddCount(array,10);
+    printf("No.of odd numbers in the given array is:%d",count);
+    
+}
+int oddCount(int arr[],int size){
+    int count=0;
+    for(int i=0;i<size;i++){
+        if(arr[i]%2 != 0)
+        count+=1;
+    }
+    return count;
+}
