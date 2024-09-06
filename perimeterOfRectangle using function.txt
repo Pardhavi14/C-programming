@@ -1,0 +1,15 @@
+//perimeterOfRectangle using function
+#include <stdio.h>
+
+float perimeterOfRectangle(float,float);
+void main(){
+    printf("Welcome");
+    float l,w;
+    scanf("%f %f",&l,&w);
+    perimeterOfRectangle(l,w);
+    printf("perimeter of rectangle:%f",(l+w)*2);
+}
+
+float perimeterOfRectangle(float l,float w){
+    return (l+w)*2;
+ }
