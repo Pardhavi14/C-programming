@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+ struct book {
+    char title[20];
+    char author[20];
+    float price;
+};
+
+int main() {
+   struct book a1={"placebo","vimal",500};
+   struct book a2={"oliver twist","oliver",248};
+   
+   printf("%s\n",a1.title);
+   printf("%s\n",a2.author);
+   printf("%f",a1.price);
+ return 0;
+}
