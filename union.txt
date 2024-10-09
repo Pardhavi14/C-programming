@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+
+ union book {
+    char title[20];
+    char author[20];
+    float price;
+}a1;
+
+int main() {
+   strcpy(a1.title,"placebo");
+   printf("%s\n",a1.title);
+   
+   strcpy(a1.author,"vimal");
+   printf("%s\n",a1.author);
+   
+   a1.price=500;
+   printf("%f",a1.price);
+  
+ return 0;
+}
