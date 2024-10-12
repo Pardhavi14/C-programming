@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+float large(float *ptr,int n);
+
+int main(){
+    float numbers[5] = {983, 2.9, 34, 433, 100.567};
+    float *ptr=numbers;
+    float max=large(numbers,5);
+    printf("the largest number in the given array is:%.2f",max);
+    return 0;
+}
+
+float large(float *ptr,int n){
+    float max=0,i;
+   for(i=0;i<n;i++){
+       if(max<*ptr){
+           max=*ptr;
+       }
+       ptr++;
+   }
+  return max;  
+    
+}
